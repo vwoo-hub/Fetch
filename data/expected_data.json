@@ -1,0 +1,55 @@
+{
+  "Cupertino,CA,US": {
+    "latitude": 37.3228934,
+    "longitude": -122.0322895,
+    "city": "Cupertino",
+    "state": "California",
+    "country": "US"
+  },
+  "San Francisco,CA,US": {
+    "latitude": 37.7790262,
+    "longitude": -122.419906,
+    "city": "San Francisco",
+    "state": "California",
+    "country": "US"
+  },
+  "Phoenix,AZ,US": {
+    "latitude": 33.4484367,
+    "longitude": -112.074141,
+    "city": "Phoenix",
+    "state": "Arizona",
+    "country": "US"
+  },
+  "Las Vegas,NV,US": {
+    "latitude": 36.1672559,
+    "longitude": -115.148516,
+    "city": "Las Vegas",
+    "state": "Nevada",
+    "country": "US"
+  },
+  "94404": {
+    "zip code": "94404",
+    "latitude": 37.5538,
+    "longitude": -122.27,
+    "city": "Foster City",
+    "country": "US"
+  },
+  "invalid_locations": {
+    "San Francisco,CA": {
+      "error": "Invalid location"
+    },
+    "Mordor,AK,US": {
+      "error": "Invalid location"
+    }
+  },
+  "invalid_zip_codes": {
+    "1234567890": {
+      "zip_code": "1234567890",
+      "error": "Invalid location"
+    },
+    "00000": {
+      "zip_code": "1234567890",
+      "error": "Invalid location"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "valid_locations": [
+    "Cupertino,CA,US",
+    "Las Vegas,NV,US",
+    "Phoenix,AZ,US",
+    "San Francisco,CA,US"
+  ],
+  "invalid_locations": [
+    "San Francisco,CA",
+    "Mordor,AK,US"
+  ],
+  "valid_zip_codes": [
+    "94404"
+  ],
+  "invalid_zip_codes": [
+    "1234567890"
+  ]
+}

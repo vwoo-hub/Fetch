@@ -2,7 +2,7 @@ import argparse
 import json
 import requests
 
-def get_coordinates_by_location(location, api_key, limit = 1):
+def get_coordinates_by_location(location, api_key, limit = 5):
     url = f'http://api.openweathermap.org/geo/1.0/direct?q={location}&limit={limit}&appid={api_key}'
     response = requests.get(url)
     data = response.json()
