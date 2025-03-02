@@ -34,6 +34,27 @@
     "city": "Foster City",
     "country": "US"
   },
+  "90011": {
+    "zip code": "90011",
+    "latitude":  34.0079,
+    "longitude": -118.2582,
+    "city": "Los Angeles",
+    "country": "US"
+  },
+  "90650": {
+    "zip code": "90650",
+    "latitude": 33.9056,
+    "longitude": -118.0818,
+    "city": "Norwalk",
+    "country": "US"
+  },
+  "10004": {
+    "zip code": "10004",
+    "latitude": 40.7143,
+    "longitude": -74.006,
+    "city": "New York",
+    "country": "US"
+  },
   "invalid_locations": {
     "San Francisco,CA": {
       "error": "Invalid location"

@@ -26,14 +26,11 @@ def get_coordinates_by_location(location, api_key, limit = 5):
     result = json.dumps(result, ensure_ascii=False,  indent=4)
     return result
 
-
-# func that gets coords by zip (area code)
 def get_coordinates_by_zip_code(zip_code, api_key):
     url = f'http://api.openweathermap.org/geo/1.0/zip?zip={zip_code}&appid={api_key}'
     response = requests.get(url)
     data = response.json()
 
-    # data is valid containing lat and lon keys
     if "lat" in data and "lon" in data:
         result = {
             "zip code": zip_code,
@@ -42,7 +39,6 @@ def get_coordinates_by_zip_code(zip_code, api_key):
             "city": data["name"],
             "country": data["country"]
         }
-    # data containing invalid zip code
     else:
         result = {
             "zip code": zip_code,

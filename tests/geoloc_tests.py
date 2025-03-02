@@ -2,6 +2,7 @@ import json
 import os
 
 import pytest
+
 import geoloc_util
 
 API_KEY = 'c2d57e7ccb9a4ee8915556a125507662'
@@ -34,7 +35,7 @@ def test_get_coordinates_by_location_with_multiple_locations(location):
     api_key = API_KEY
     result = geoloc_util.get_coordinates_by_location(location, api_key)
     result = json.loads(result)
-    expected = expected_data.get(location, {})
+    expected = expected_data.get(location)
 
     assert result['latitude'] == expected.get('latitude')
     assert result['longitude'] == expected.get('longitude')
@@ -63,11 +64,18 @@ def test_get_coordinates_by_valid_zip_code(zip_code):
     assert result['city'] == expected['city']
     assert result['country'] == expected['country']
 
-def test_get_coordinates_by_multiple_zip_codes():
-    zip_code = ['90011', '90650', '91331']
+@pytest.mark.parametrize("zip_code", ['90011', '90650', '10004'])
+def test_get_coordinates_by_multiple_zip_codes(zip_code):
     api_key = API_KEY
     result = geoloc_util.get_coordinates_by_zip_code(zip_code, api_key)
     result = json.loads(result)
+    expected = expected_data[zip_code]
+
+    assert result['zip code'] == expected['zip code']
+    assert result['latitude'] == expected['latitude']
+    assert result['longitude'] == expected['longitude']
+    assert result['city'] == expected['city']
+    assert result['country'] == expected['country']
 
 @pytest.mark.parametrize("zip_code", test_data["invalid_zip_codes"])
 def test_error_message_by_invalid_zip_code(zip_code):
