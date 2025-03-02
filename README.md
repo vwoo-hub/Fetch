@@ -13,11 +13,12 @@ A command line utility that retrieves longitude and latitude coordinates, and ot
 
 
 * Running the util:
+  * Make sure you have an active API key, which you'll sub in as <API_KEY> below
   * In the project root directory, run any of the following commands:
-    * `python geoloc_util.py --locations "San Francisco","CA","US" --api_key c2d57e7ccb9a4ee8915556a125507662`
-    * `python geoloc_util.py --locations "94404" --api_key c2d57e7ccb9a4ee8915556a125507662`
+    * `python geoloc_util.py --locations "San Francisco","CA","US" --api_key <API_KEY>`
+    * `python geoloc_util.py --locations "94404" --api_key <API_KEY>`
   * You can also mix and match locations and/or zip codes together in a single command:
-    * `python geoloc_util.py --locations "San Francisco","CA","US" "95014" "90007" "Miami","FL","US" --api_key c2d57e7ccb9a4ee8915556a125507662`
+    * `python geoloc_util.py --locations "San Francisco","CA","US" "95014" "90007" "Miami","FL","US" --api_key <API_KEY>`
 
 
 * Running the tests:
